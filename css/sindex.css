@@ -169,7 +169,7 @@ img {
     background-color: #FFFFFF;
   }
 }
-@media (max-width:800px) {
+@media (max-width:900px) {
   .container {
     width: 800px;
     width: 100%;
@@ -212,8 +212,9 @@ footer .phone a {
   color: #FFFFFF;
   font-size: 2rem;
 }
-body {
-  background-color: #FFFFFF;
+footer .frame {
+  display: flex;
+  flex-direction: row;
 }
 .container header {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJfFj-gZGUdP9s5DElddV14JduTQyYA9tXoE-iV9wXKSC0rE3C&s");
@@ -231,7 +232,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     min-height: 20rem;
-    width: 500px;
+    padding-top: 0;
   }
   .container header nav a {
     color: #FFFFFF;
@@ -268,7 +269,7 @@ footer p {
   margin-top: 2rem;
   color: #FFFFFF;
 }
-@media (max-width:600px), (max-width:800px) {
+@media (max-width:600px), (max-width:900px) {
   footer nav {
     display: flex;
     flex-direction: column;
