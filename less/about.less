@@ -1,3 +1,4 @@
+.container {
 header {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShf7kpue0oTjMpWyiBOnC5vhGerndx-pMvm7sK9DW8wV0DB8rc&s");
   background-position: center;
@@ -8,7 +9,16 @@ header {
   nav {
     a {
       color: @white;
+    
+      
     }
+    @media @mobile, @tablet{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+   
   }
 
 
@@ -17,6 +27,9 @@ header {
     text-align: center;
     margin-top: 6rem;
     font-weight: 400;
+  }
+  @media @mobile, @tablet{
+    padding-bottom: 4rem;
   }
 }
 
@@ -28,27 +41,36 @@ header {
   width: 250px;
   margin: auto;
   text-align: center;
-}
-
-.top-team-Images .team {
-  width: 250px;
-  margin-right: 3rem;
-  text-align: center;
   .developer {
-    border-radius: 3rem;
-    background-color: #fb5b21;
-    color: @white;
+    .developer();
   }
 }
-.bottom-team-Images .team {
-  width: 250px;
-  margin-right: 3rem;
-  margin-top: 2rem;
-  text-align: center;
+
+@media @mobile, @tablet{
+  .top-team-Images, .bottom-team-Images{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+  }
+}
+
+
+.top-team-Images .team {
+  .topAndBottomImages();
+  
   .developer {
-    border-radius: 3rem;
-    background-color: #fb5b21;
-    color: @white;
+    .developer();
+  }
+
+
+}
+.bottom-team-Images .team {
+  .topAndBottomImages();
+
+  .developer {
+    .developer();
   }
 }
 .top-team-Images,
@@ -64,20 +86,22 @@ header {
   min-height: 50rem;
   margin-top: 10rem;
   .text {
-    text-align: center;
-    padding-top: 20rem;
-    font-weight: 400;
+      .bottomText();
     p {
-      font-size: 2rem;
+      font-size: @font-size;
     }
     button {
-      border-radius: 10rem;
-      background-color: #fb5b21;
-      color: @white;
-      font-size: 1.6rem;
-      font-weight: 600;
-      width: 200px;
-      height: 50px;
+      .bottomImgButton();
     }
   }
+  @media @mobile, @tablet {
+   background-size: contain;
+   background-repeat: no-repeat;
+   orientation: landscape;
+   .text{
+    display: block;
+  }
+   
+  }
+}
 }
